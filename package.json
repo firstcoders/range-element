@@ -11,6 +11,10 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sound-ws/range-element.git"
+  },
   "exports": {
     ".": "./index.js",
     "./soundws-range.js": "./soundws-range.js"
