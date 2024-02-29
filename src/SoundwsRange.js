@@ -189,13 +189,13 @@ export class SoundwsRange extends LitElement {
       max=${this.max}
       .value=${this.value || 0}
       step=${this.step}
-      @change=${this.handleChange}
-      @input=${this.handleInput}
+      @change=${this.#handleChange}
+      @input=${this.#handleInput}
       aria-label=${this.label}
     />`;
   }
 
-  handleChange(e) {
+  #handleChange(e) {
     e.stopPropagation();
 
     this.value = e.target.value;
@@ -205,7 +205,7 @@ export class SoundwsRange extends LitElement {
     );
   }
 
-  handleInput(e) {
+  #handleInput(e) {
     e.stopPropagation();
     this.dispatchEvent(new CustomEvent('input', { bubbles: true }));
   }
